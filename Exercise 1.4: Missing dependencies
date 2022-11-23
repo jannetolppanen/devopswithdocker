@@ -1,0 +1,12 @@
+janne@teflonlove:~$ docker run -d -it --name kontti ubuntu sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
+janne@teflonlove:~$ docker exec -it kontti bash
+root@70c2e25c3f8a:/# sudo apt update && sudo apt upgrade
+root@70c2e25c3f8a:/# apt install curl
+root@70c2e25c3f8a:/# curl helsinki.fi
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="https://www.helsinki.fi/">here</a>.</p>
+</body></html>
