@@ -1,0 +1,21 @@
+Dockerfile:
+
+FROM devopsdockeruh/simple-web-service:alpine
+CMD server
+
+janne@teflonlove:~$ janne@teflonlove:~$ nano Dockerfile
+janne@teflonlove:~$ docker build . -t web-server
+Sending build context to Docker daemon  679.7MB
+Error response from daemon: dockerfile parse error line 3: unknown instruction: GNU
+janne@teflonlove:~$ nano Dockerfile
+janne@teflonlove:~$ nano Dockerfile
+janne@teflonlove:~$ docker build . -t web-server
+Sending build context to Docker daemon    680MB
+Step 1/2 : FROM devopsdockeruh/simple-web-service:alpine
+ ---> fd312adc88e0
+Step 2/2 : CMD server
+ ---> Running in 9be04dc21ee8
+Removing intermediate container 9be04dc21ee8
+ ---> 57f8f4781a00
+Successfully built 57f8f4781a00
+Successfully tagged web-server:latest
