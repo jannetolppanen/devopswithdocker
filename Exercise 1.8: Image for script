@@ -1,0 +1,11 @@
+FROM ubuntu:20.04
+
+WORKDIR /usr/scr/app
+
+COPY curleri.sh .
+
+RUN apt update && apt upgrade -y
+
+RUN apt install curl -y
+
+CMD ./curleri.sh
